@@ -1,0 +1,30 @@
+#pred_table {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    font-size: 32px;
+    border-collapse: separate;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+}
+
+#pred_table td,
+#pred_table th {
+    padding: 8px;
+    padding-top: 24px;
+}
+
+#pred_table tr:hover {
+    background-color: #ddd;
+}
+
+.sno {
+    text-align: end;
+}
+
+.table_crop {
+    text-align: start;
+}

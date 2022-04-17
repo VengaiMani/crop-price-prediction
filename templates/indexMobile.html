@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Prediction system for Agricultural crops</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome CSS -->
+    <link href="./static/css/all.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./static/css/style.css" rel="stylesheet">
+    <link href="./static/css/mystyle.css" rel="stylesheet">
+    <link href="./static/css/style_for_index.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h4 style="text-align:center;padding-bottom: 50px;">Prediction system for Agricultural crops</h4>
+
+    <!-- Navigation -->
+    <header class="slider-main">
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('./static/images/slider-01.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Prediction system for Agricultural crops</h3>
+                        <p>Right crop to cultivate</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./static/images/slider-02.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Prediction system for Agricultural crops</h3>
+                        <p>Right crop to cultivate</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./static/images/slider-03.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Prediction system for Agricultural crops</h3>
+                        <p>Right crop to cultivate</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <br>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="services-bar">
+            <h1 class="my-4">Some useful fruits and vegetables</h1>
+            <br>
+            <!-- Services Section -->
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header">Mango</h4>
+                        <div class="card-img">
+                            <img class="img-fluid" src="./static/images/mango.jpg" alt="mango" />
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Mangos have been an important crop in India for millennia. Today, these colorful, sweet fruits are a mainstay of Indian cuisine and are popular throughout the world.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="mango" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header">Apple</h4>
+                        <div class="card-img">
+                            <img class="img-fluid" src="./static/images/apple.jpg" alt="apple" />
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Apples are high in fiber and water — two qualities that make them filling. In one study, people who ate apple slices before a meal felt fuller than those who consumed applesauce, apple juice, or no apple products.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="apple" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header">Banana</h4>
+                        <div class="card-img">
+                            <img class="img-fluid" src="./static/images/banana.jpg" alt="banana" />
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Bananas are extremely healthy and delicious. They contain several essential nutrients and provide benefits for digestion, heart health and weight loss. Aside from being very nutritious, they are also a highly convenient snack
+                                food.
+
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="banana" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+
+        <br><br>
+        <div id="predictVeg">
+
+
+            <br>
+            <br>
+            <h2>Product prediction</h2>
+
+            <br>
+            <form action='/predict' method="post" class="form-style-9">
+                <div>
+                    <label for="inputState"><strong>State</strong></label>
+                    <br>
+                    <select id="inputState">
+                        <option value="SelectState" disabled selected>Select state</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+
+                        <option disabled style="background-color:#aaa; color:#fff;padding-top: 10px;">UNION Territories
+                        </option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label for="inputDistrict"><strong>District</strong></label>
+                    <br>
+                    <select id="inputDistrict">
+                        <option value="SelectDistrict" disabled selected>Select district</option>
+                        <option value="Kharif">Thanjavur</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label for="inputSeason"><strong>Season</strong></label>
+                    <br>
+                    <select id="inputSeason">
+                        <option value="SelectSeason" disabled selected>Select season</option>
+                        <option value="Kharif">Kharif</option>
+                        <option value="Rabi">Rabi</option>
+                        <option value="Autumn">Autumn</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Whole_year">Whole year</option>
+                    </select>
+
+                </div>
+                <br>
+
+                <div>
+                    <label for="inputSoilType"><strong>Soil Type</strong></label>
+                    <br>
+                    <select id="inputSoilType">
+                        <option value="SelectSoilType" disabled selected>Select soil type</option>
+                        <option value="Red_soil">Red soil</option>
+                        <option value="Alluvial_soil">Alluvial soil</option>
+                        <option value="Laterite_soil">Laterite soil</option>
+                        <option value="Black_soil">Black soil</option>
+                        <option value="Marshy_soil">Marshy soil</option>
+                        <option value="Alkaline_soil">Alkaline soil</option>
+                        <option value="Yellow_soil">Yellow soil</option>
+                        <option value="Acidic_soil">Acidic soil</option>
+                        <option value="Arid_soil">Arid soil</option>
+                        <option value="Clay_soil">Clay soil</option>
+                        <option value="Mountain_soil">Mountain soil</option>
+                    </select>
+
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+
+
+            <br>
+            <!-- <div style="text-align:center;width: 100%;">
+                <h5>{{labelCrop}}</h5>
+                <h1>{{crop}}</h1>
+                <h5>{{labelPrice}}</h5>
+                <h3>{{price}}</h3>
+
+            </div> -->
+            <h2 style="text-align: center;">Prediction results</h2>
+            <br>
+            <h4>State name: Tamilnadu</h4>
+            <h4>District name: Thanjavur</h4>
+            <br><br>
+            <table id="pred_table">
+                <tr>
+                    <td class="sno">1.</td>
+                    <td class="table_crop">Paddy</td>
+                </tr>
+                <tr>
+                    <td class="sno">2.</td>
+                    <td class="table_crop">Watermelon</td>
+                </tr>
+                <tr>
+                    <td class="sno">3.</td>
+                    <td class="table_crop">Cucumber</td>
+                </tr>
+                <tr>
+                    <td class="sno">4.</td>
+                    <td class="table_crop">Corn</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+    </div>
+
+
+    <br>
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class=" footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10">If you have any queries, you can reach out to us through the contact information.
+                    </p>
+                    <p><i class="fa fa-location-arrow"></i> techupz_official</p>
+                    <p><i class="fa fa-phone"></i> +91- 9999 878 398 </p>
+                    <p><i class="fa fa fa-envelope"></i> support@techupz.com </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/js/script1.js"></script>
+    <script>
+        var state = document.getElementById("inputState");
+        var district = document.getElementById("inputDistrict");
+        var districtString;
+        state.onchange = function() {
+            console.log("Script called");
+            districtString = getDistricts(state.value);
+            console.log(districtString);
+            district.innerHTML = districtString;
+        };
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
