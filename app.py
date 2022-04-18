@@ -7,7 +7,7 @@ import configModel as map_crop
 
 app=Flask(__name__)
 
-model=pickle.load(open('model.pkl','rb'))
+# model=pickle.load(open('model.pkl','rb'))
 map={}
 
 @app.route('/')
@@ -68,16 +68,16 @@ def predict():
     features=[convert(x) for x in request.form.values()]
     features.append(0)
     crops=load_crops()
-    max_crop=""
-    max_price=-1
+    max_crop="Test"
+    max_price=0
     for i in crops:
         values=features.copy()
         values.append(convert(i))
         final=[np.array(values)]
-        pred=model.predict(final)
-        if(pred>max_price):
-            max_price=pred
-            max_crop=i
+        # pred=model.predict(final)
+        # if(pred>max_price):
+        #     max_price=pred
+        #     max_crop=i
 
     text_crop="The predicted fruit or vegetable is"
     text_price="and the predicted price is"
